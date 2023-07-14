@@ -50,12 +50,8 @@ export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
 
 
 clear
-source /var/lib/scrz-prem/ipvps.conf
-if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
-else
-domain=$IP
-fi
+
 
 echo -e "[ ${GREEN}INFO${NC} ] Checking... "
 sleep 1
